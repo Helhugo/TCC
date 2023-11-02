@@ -1,0 +1,8 @@
+INSERT INTO `produto` (`nome_Prod`, `valor_Prod`, `descricao_Prod`,
+`link_Prod`, `img_Prod`, `promo_Prod`, `desconto_Prod`, `clasfic_Prod`)
+VALUES ('Cone de Duo', '5', 'Um delicioso cone de Brigadeiro com Ninho', '',
+'duo.jpg', '', '0', '4.5'),
+('Cone de Oreo', '5', 'Um magnífico cone de Oreo', '',
+'oreo.jpg', '', '0', '5'),
+('Cone de Chocomenta', '5', 'Um cone de Chocomenta', '',
+'eca.jpg', '', '0', '1');

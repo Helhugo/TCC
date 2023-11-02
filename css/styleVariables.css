@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+	box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --bg-color-light: #fcffee;
+    --bg-color: #f5fadc;
+    --secondary-color: #46bfcd;
+    --secondary-color-hover: #5fd2df;
+    --secondary-color-click: #009daf;
+    --primary-color: #f582b1;
+    --primary-color-hover: #ffa5ca;
+    --primary-color-click: #ef5d99;
+    --terciary-color: #fff;
+    --terciary-color-hover: #d3f4ff;
+    --terciary-color-click: #3f90c7;
+    --fs-small: 1.4rem;
+	--fs-small-G: 1.8rem;
+    --fs-medium: 2rem;
+    --fs-medium-G: 2.5rem;
+    --fs-big: 3rem;
+    --fs-highlighted: 4rem;
+    --top-position: 0px;
+}

@@ -1,0 +1,36 @@
+.trufaDuo {
+    display: flex;
+    justify-content: start;
+    align-items: self-end;
+}
+#cbDuotrufa {   
+    margin-right: 0.7rem;
+}
+
+.favoritos {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    aspect-ratio: 1 / 1;
+    height: 20px;
+    display: grid;
+    place-items: center;
+}
+.favoritos i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 100vw;
+    height: 33px;
+    aspect-ratio: 1 / 1;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+	padding-top: 2px;
+    transition: .4s;
+}
+
+.favoritos i:hover {
+    background: var(--primary-color);
+    color: var(--terciary-color);
+}

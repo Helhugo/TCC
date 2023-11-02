@@ -1,0 +1,30 @@
+.bgSobre{
+    padding: 10rem 18rem;
+    display: flex;
+    position: relative;
+    height: 900px;
+    
+}
+.txtBox {
+	background: var(--terciary-color);
+    min-width: 100%;
+    border: 2px solid var(--primary-color);
+    border-radius: 1rem;
+    box-shadow: -14px 12px 1px var(--primary-color);
+    display: grid;
+    padding: 3rem;
+    align-items: center;
+    gap: 1rem;
+}
+.titleSobre {
+    text-align: start;
+    padding: 0.5rem 1.5rem;
+    border-radius: 1rem;
+    background: var(--primary-color);
+    color: var(--terciary-color);
+    font-size: 4rem;
+}
+.textSobre {
+    font-size: 2rem;
+    color: var(--primary-color);
+}

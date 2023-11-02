@@ -1,0 +1,112 @@
+html {
+    font-size: 62.5%;
+}
+html, body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    /*background-color: var(--bg-color-light);*/
+}
+
+main {
+    display: grid;
+    padding: 6rem 20rem 20rem 20rem;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 20% 20% 20%;
+    gap: 2rem 1rem;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.highlightImg {
+    overflow: hidden;
+    height: 100%;
+    display: grid;
+    border: 6px solid var(--primary-color);
+    grid-row: 1 / 4;
+    background-position: bottom;
+    background-size: 105%;
+    background-image: url(../imagens/imagePrinc.jpg);
+    box-shadow: inset 0px -70px 60px #12011a;
+    cursor: pointer;
+    transition: 0.3s;
+    animation: destaqueMov 60s ease-in-out infinite;
+}
+
+@keyframes destaqueMov {
+    0%{
+        background-position: bottom;
+    }
+    50% {
+        background-position: top;
+    }
+    100% {
+        background-position: bottom;
+    }
+}
+
+.highlightImg:hover {
+    box-shadow: inset 0px -155px 70px -50px #12011a;
+    background-size: 100%;
+}
+.highlightImg:hover h3.imgDescription {
+    text-shadow: 0px 0px 16px #ffa5ca75;
+}
+.highlightImg h3.imgDescription {
+    text-align: left;
+    align-self: end;
+    font-size: var(--fs-highlighted);
+    color: var(--primary-color);
+    padding: 1.5rem;
+    font-weight: 300;
+    transition: 0.4s;
+}
+
+.topSecondaryImg {
+    overflow: hidden;
+    height: 100%;
+    display: grid;
+    border: 6px solid var(--secondary-color);
+    background-position: bottom;
+    background-size: 105%;
+    background-image: url(../imagens/imagePrinc.jpg);
+    box-shadow: inset 0px -70px 60px #010a1a;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.topSecondaryImg:hover,
+.midSecondaryImg:hover,
+.botSecondaryImg:hover {
+    background-size: 100%;
+    box-shadow: inset 0px -155px 70px -50px #010a1a;
+}
+.topSecondaryImg:hover h3.imgDescription,
+.midSecondaryImg:hover h3.imgDescription,
+.botSecondaryImg:hover h3.imgDescription {
+    text-shadow: 0px 0px 16px #5fd2dfa3;
+}
+h3.imgDescription {
+    text-align: left;
+    align-self: end;
+    font-size: var(--fs-highlighted);
+    color: var(--secondary-color);
+    padding: 1.5rem;
+    font-weight: 300;
+    transition: 0.4s;
+}
+
+.midSecondaryImg,
+.botSecondaryImg {
+    overflow: hidden;
+    height: 100%;
+    display: grid;
+    border: 6px solid var(--secondary-color);
+    background-position: top;
+    background-size: 105%;
+    background-image: url(../imagens/imagePrinc.jpg);
+    box-shadow: inset 0px -70px 60px #010a1a;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.botSecondaryImg {
+    background-position: center;
+}

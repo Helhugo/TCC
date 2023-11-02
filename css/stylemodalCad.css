@@ -1,0 +1,198 @@
+.modalBg,
+.modalBgErro,
+.modalBgProd,
+.modalBgAdm,
+.modalInfo_conta,
+.newLogin_modal {
+	display: none;
+	transition: 0.5s;
+}
+.modalBg.on[data-state="closing"],
+.modalBgErro.on[data-state="closing"],
+.modalBgAdm.on[data-state="closing"],
+.modalBgProd.on[data-state="closing"],
+.modalInfo_conta.on[data-state="closing"],
+.newLogin_modal.on[data-state="closing"] {
+	animation: fadeout 0.5s linear forwards;
+}
+
+.modalBgErro .modalContent {
+    height: 30%;
+	min-height: 250px;
+	max-width: 550px;
+	grid-template-rows: 30%;
+	box-shadow: 0px 0px 80px #7c1a1a5c;
+}
+.modalBgErro .modalBody {
+    padding: 2rem;
+    font-size: 1.3rem;
+    color: var(--primary-color-click);
+}
+.modalBgErro .modalContent .modalBody a {
+    position: relative;
+    top: 2rem;
+    cursor: pointer;
+    color: #f54a90;
+    border-bottom: 1px solid;
+}
+
+.modalBg.on,
+.modalBgErro.on,
+.modalBgAdm.on,
+.modalBgProd.on,
+.modalInfo_conta.on,
+.newLogin_modal.on
+{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    position: fixed;
+    z-index: 20;
+    inset: 0;
+    place-items: center;
+    background: #00000057;
+	transition: 0.5s;
+	animation: fadein .5s ease-out forwards;
+}
+@keyframes fadein {
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+@keyframes fadeout {
+	100%{
+		opacity: 0;
+	}
+	0%{
+		opacity: 1;
+	}
+}
+
+.modalContent {
+    width: 30%;
+	min-width: 475px;
+	max-width: 550px;
+    max-height: 660px;
+    height: 85%;
+    display: grid;
+    grid-template-columns: 1fr;
+	grid-template-rows: 12%;
+    box-shadow: 0px 0px 80px #1a727c5c;
+	background: var(--terciary-color);
+    border-radius: 25px;
+}
+.modalHead {
+    background: var(--secondary-color);
+    border-radius: 21px 21px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 2.4rem;
+}
+.modalHead h2 {
+    color: var(--terciary-color);
+    font-size: 2.6rem;
+	margin-top: .4rem;
+}
+.modalHead i {
+	color: var(--terciary-color);
+	font-size: 3.2rem;
+    margin-top: .4rem;
+	cursor: pointer;
+	transition: 0.4s;
+}
+.modalHead i:hover {
+	color: var(--terciary-color-hover);
+}
+.modalHead i:active {
+	color: var(--terciary-color-click);
+}
+
+.modalBody form {
+    display: grid;
+    padding: 2.5rem;
+    row-gap: .3rem;
+	height: clamp(50%, 70vh + 5rem, 100%);
+	min-height: 432px;
+}
+.inputsDiv {
+    display: grid;
+    overflow-y: auto;
+}
+.inputsDiv::-webkit-scrollbar {
+    width: 10px;
+}
+.inputsDiv::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background: var(--secondary-color);
+    box-shadow: inset 3px 0 0 0 var(--terciary-color);
+}
+.modalBody form input {
+	margin-bottom: 1rem;
+    border: 3px solid var(--secondary-color);
+    border-radius: .7rem;
+    padding: .7rem;
+    font-size: 1.5rem;
+    color: var(--secondary-color-click);
+}
+input#inputNasc {
+    height: 38px;
+}
+.modalBody form input:focus-visible {
+    border-color: var(--secondary-color-click);
+    outline: 1px solid var(--terciary-color);
+}
+.modalBody form label {
+    font-size: 1.5rem;
+    color: var(--secondary-color-click);
+    font-weight: 500;
+}
+.modalBody form hr {
+    border: none;
+    height: 2px;
+    background: var(--secondary-color);
+    margin-bottom: 1.5rem;
+	margin-top: .5rem;
+}
+form:valid input[type="submit"] {
+    padding: 1.3rem;
+    font-weight: 500;
+    letter-spacing: .3px;
+    transition: .5s;
+	align-self: start;
+    color: var(--terciary-color);
+    background: var(--secondary-color);
+    cursor: pointer;
+}
+form:valid input[type="submit"]:hover {
+    background: var(--secondary-color-hover);
+	border-color: var(--secondary-color-hover);
+}
+form:invalid input[type="submit"] {
+	padding: 1.3rem;
+    font-weight: 500;
+	align-self: start;
+	background: unset;
+	color: var(--secondary-color);
+    letter-spacing: .3px;
+}
+
+input#inputFoto {
+    border: 0;
+    height: 40px;
+}
+
+/* RESPONSIVIDADE TELAS DE CELULARES PEQUENAS */
+
+@media(max-width: 425px) {
+	.modalContent {
+		width: 90%;
+		min-width: 276px;
+	}
+	.inputsDiv::-webkit-scrollbar {
+		width: 7px;
+	}
+}
